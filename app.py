@@ -1,3 +1,5 @@
+#esta funcion contiene el input de entrada para el numero de nomina para el empleado
+#y tambien ya contiene la validacion para evitar que se ingrese campo vacio, solo valores alfanumericos
 def numero_nomina():
     while True:
         id_empleado = input("Ingresa tu numero de nomina: ")
@@ -6,8 +8,7 @@ def numero_nomina():
         else:
             return id_empleado
 
-
-
+#esta funcion recibe el nombre del usuario ya con validacion, solo acepta letras
 def nombre_usuario():
     while True:
         nombre = input("Ingresa tu nombre completo: ")
@@ -16,6 +17,7 @@ def nombre_usuario():
         else:
             print("Formato incorrecto, ingrese solo letras")
 
+#esta funcion maneja la cantidad de videos, que se desea cargar ya con su validacion, solo cepta numeros
 def cantidad_videos():
     videos = input("Ingresa la cantidad de videos a subir: ")
     while not(videos.isdigit()):
@@ -24,7 +26,8 @@ def cantidad_videos():
 
     return int(videos)
 
-
+#esta funcion se encarga de recopilar la informacion ingresada en:
+# numero_nomina(), nombre_usuario(), cantidad_videos() y solo devuelve los valores de las funciones
 def validar_informacion():
     id_empleado = numero_nomina()
     nombre = nombre_usuario()
@@ -32,29 +35,45 @@ def validar_informacion():
     print(f"Bienvenido {nombre}, tu numero de nomina es {id_empleado} y estas intentando subir {videos} videos, la informacion es correcta?")
     return id_empleado, nombre, videos
 
-#validar_informacion()
+#esta funcion se encarga de manejar solo dos respuestas: si y no, y tambien contiene validacion
+#en caso que se ingrese otra respuestas y asi evitar errores en el sistema
 def manejar_respuesta():
-    respuesta = input("Si/No: ")
-    return respuesta
+    while True:
+        respuesta = input("Si/No: ").lower()
+        solo_si_no = ["si", "no"]
+        if respuesta not in solo_si_no:
+            print("Formato incorrecto, ingrese solo (si, no)")
+        else:
+            return respuesta
 
-def respuesta_si():
+#como su nombre lo indica esta funcion se ejecuta cuando el usuario ingresa "si" en manejar_respuesta() y luego pide los datos:
+#titulo_video, nombre, extension_video, megas_video, tambien contiene una lsta vacia "lista_videos" en la cual se insertan
+#los datos obtenidos para posteriormente retornalos y asi poder obtener dicha informacion dede otra parte donde sea requerida
+def respuesta_si(videos):
         lista_videos = []
-        for i in range(cantidad_videos()):
+        for i in range(videos): # aqui se realiza una iteracion despues que se valido cantidad_video() en validar_informacion()
+                                # y dependiendo de cuantos videos desea subir el cliente es la cantidad de veces que se pedira:
+                                #titulo_video, nombre_video y extension_video
 
+
+            #aqui se realiza la validacion del titulo del video solo con valores alfanumericos
             while True:
                 titulo_video = input("Ingresa un titulo para el video: ")
-                if not titulo_video.isalnum():
+                if not titulo_video.replace(" ", "").isalnum():
                     print("Titulo en formato incorrecto, ingrese solo numeros y letras")
                 else:
                     break
 
+            # aqui se realiza la validacion del nombre del video solo con valores alfanumericos
             while True:
                 nombre_video = input("Ingresa un nombre para el video: ")
-                if not nombre_video.isalnum():
+                if not nombre_video.replace(" ", "").isalnum():
                     print("Nombre en formato incorrecto, ingrese solo numeros y letras: ")
                 else:
                     break
 
+            # aqui se realiza la validacion de la extension del video solo acepta los valores que se encuentran en
+            # la lista extensiones (".mpg", ".mov", ".mp4", ".avi")
             while True:
                 extension_video = input("Ingresa la extension del video(.mpg, .mov, etc.): ")
                 extensiones = [".mpg", ".mov", ".mp4", ".avi"]
@@ -63,7 +82,7 @@ def respuesta_si():
                 else:
                     break
 
-
+            # aqui se realiza la validacion en megas del video solo acepta numeros y no mayor a 3
             while True:
                 megas_video = input("Ingresa el tamano en megas del video(no mayor a 3): ")
                 if megas_video.isdigit():
@@ -76,7 +95,8 @@ def respuesta_si():
                 else:
                     print("Tamano en formato incorrecto,  Ingrese solo numeros")
 
-
+            #en este bloque se insertanlos datos ya validados de titulo_video, nombre_video, extension_video, megas_video
+            #se van a insertar a la lista vacia lista_videos
             lista_videos.append({
                 "titulo": titulo_video,
                 "nombre": nombre_video,
@@ -86,30 +106,40 @@ def respuesta_si():
 
         return lista_videos
 
-#info_videos = respuesta_si()
-#crear_archivo(id_empleado, nombre, videos, lista_videos)
-#respuesta_si()
 
-def respuesta_no(id_empleado, nombre, videos):
+#como su nombre lo indica esta funcion se ejecuta cuando el usuario ingresa "no" en la funcion manejar_respuesta,
+#se le pregunta al usuario si desea salir, en caso contrario inicia un bucle  en el cual va iniciar a pedir la informacion de:
+#numero_nomina(),nombre_usuario(), cantidad_videos() hasta que el usuario ingrese que si esta bien la informacion
+def respuesta_no(respuesta,):
     #respuesta = manejar_respuesta()
-    if manejar_respuesta() == 'no':
-        while True:
+    if respuesta == 'no':
+        while True: #aqui inicia el bucle
             print("Desea salir del sistema?")
-            sub_response = input("Si/No: ")
 
+            while True:
+                sub_response = input("Si/No: ") #aqui se crea una variable con un input dentro del bucle la cual esta validada para
+                solo_si_no = ["si", "no"]       #solo aceptar (si, no)
+                if sub_response not in solo_si_no:
+                    print("Formato incorrecto, ingrese solo (si, no)")
+                else:
+                    break
+
+            # si la respuesta ingresada en sub_response es si, se rompe el ciclo y se sale del bucle
             if sub_response == 'si':
                 print("Gracias por usar nuestro sistema, hasta luego...")
                 break
-            elif sub_response == 'no':
-                id_empleado, nombre, videos = validar_informacion()
+            elif sub_response == 'no':   # si la respuesta ingresada en sub_response es no, se usa la tecnica de desempaquetado para obtener
+                id_empleado, nombre, videos = validar_informacion()  # los valores de la funcion validar_informacion() y manejar_respuesta()
                 respuesta  = manejar_respuesta()
-
+                #si la respuesta ingresada en respuesta de la funcion manejar_respuesta() es si, se valida y se obtine los valores de la lista lista_videos
+                #para poder crear el archivo txt
                 if respuesta == "si":
-                    lista_videos = respuesta_si()
+                    lista_videos = respuesta_si(videos)
                     crear_archivo(id_empleado, nombre, videos, lista_videos)
 
-    #respuesta_no(id_empleado, nombre, videos)
 
+#esta funcion se encarga de crear un archivo y luego insertar los datos ya validados en id_empleado, nombre, videos, lista_videos
+#y en lista_videos
 def crear_archivo(id_empleado, nombre, videos, lista_videos):
     contenido_archivo = (
         "*******IMPRESION DE DATOS******\n"
@@ -127,11 +157,11 @@ def crear_archivo(id_empleado, nombre, videos, lista_videos):
             f"Titulo: {i['titulo']}\n"
             f"Nombre: {i['nombre']}\n"
             f"Extension: {i['extension']}\n"
-            f"Tamano: {i['tamano']}\n"
+            f"Tamano: {i['tamano']} MB\n"
             "********************************\n"
         )
         #enumerar_videos += 1
-
+#aqui se realiza ua exception en caso de que falle al crear el archivo
     try:
         with open('salida.txt', 'w') as file:
             file.write(contenido_archivo)
@@ -140,17 +170,17 @@ def crear_archivo(id_empleado, nombre, videos, lista_videos):
         print(f"Error al guardar el archivo: {e}")
 
 
-
+#esta funcion se encarga de inciar todas las funciones de la app
 def iniciar_app():
     id_empleado, nombre, videos = validar_informacion()
     respuesta = manejar_respuesta()
 
+
     if respuesta == 'si':
-        lista_videos = respuesta_si()
+        lista_videos = respuesta_si(videos)
         crear_archivo(id_empleado, nombre, videos, lista_videos)
     else:
-        #respuesta == 'no':
-        respuesta_no(id_empleado, nombre, videos)
+        respuesta_no(respuesta,)
 
 
 iniciar_app()
