@@ -1,11 +1,16 @@
 *******IMPRESION DE DATOS******
-Numero de empleado: 5
-Nombre: nj
-Cantidad de videos: 1
+Numero de empleado: trfg
+Nombre: gh
+Cantidad de videos: 2
 _____________________________________
 Informacion de videos:
-Titulo: hjj
-Nombre: jk
+Titulo: fghj
+Nombre: ghj
 Extension: .mov
 Tamano: 3 MB
+********************************
+Titulo: gfgh
+Nombre: ghb
+Extension: .mov
+Tamano: 2 MB
 ********************************

@@ -1,4 +1,4 @@
-#esta funcion contiene el input de entrada para el numero de nomina para el empleado
+''''#esta funcion contiene el input de entrada para el numero de nomina para el empleado
 #y tambien ya contiene la validacion para evitar que se ingrese campo vacio, solo valores alfanumericos
 def numero_nomina():
     while True:
@@ -183,7 +183,7 @@ def iniciar_app():
         respuesta_no(respuesta,)
 
 
-iniciar_app()
+iniciar_app()'''
 
 
 
