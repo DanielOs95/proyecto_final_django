@@ -8,23 +8,50 @@ class Persona:
 
 
     def num_nomina(self):
-        id_nomina = input("Ingresa tu numero de nomina: ")
-        self.id_nomina = id_nomina
+        while True:
+            id_nomina = input("Ingresa tu numero de nomina: ")
+            self.id_nomina = id_nomina
+            if self.id_nomina.isalnum():
+                return self.id_nomina
+            else:
+                print("Formato incorrecto, ingrese solo numeros y letras")
+
+
 
     def nombre_empleado(self):
-        nombre_usuario = input("Ingresa tu nombre completo: ")
-        self.nombre_usuario = nombre_usuario
+        while True:
+            nombre_usuario = input("Ingresa tu nombre completo: ")
+            self.nombre_usuario = nombre_usuario
+            if self.nombre_usuario.replace(" ", "").isalpha():
+                return self.nombre_usuario
+            else:
+                print("Formato incorrecto, ingrese solo letras")
+
 
     def cantidad_videos_ingresados(self):
-        cantidad_videos = int(input("Ingresa la cantidad de video a subir: "))
-        self.cantidad_videos = cantidad_videos
+        while True:
+            try:
+                cantidad_videos = int(input("Ingresa la cantidad de video a subir: "))
+                self.cantidad_videos = cantidad_videos
+                break
+            except ValueError:
+                print("Formato incorrecto, ingrese solo numeros")
+
+
 
     def respuesta_valida(self):
         print(f"Bienvenido {self.nombre_usuario}, tu numero de nomina es {self.id_nomina} y estas intentando subir {self.cantidad_videos} videos, la informacion es correcta?")
 
     def respuesta_opcional(self):
-        respuesta = input("Si/No: ")
-        self.respuesta = respuesta
+        while True:
+            respuesta = input("Si/No: ").lower()
+            opcion = ["si", "no"]
+            self.respuesta = respuesta
+            if self.respuesta not in opcion:
+                print("Formato incorrecto, ingrese solo (si, no)")
+            else:
+                return self.respuesta
+
 
 
 persona = Persona("", "", "", "")
@@ -55,30 +82,61 @@ class Video(Persona):
 
         if persona.respuesta == 'si':
             for i in range(persona.cantidad_videos):
-                nombre_video = input("Ingrese un nombre para el video: ")
-                self.nombre_video = nombre_video
+                print(f"Ingresa los datos del video {i + 1}")
+                while True:
+                    nombre_video = input("Ingrese un nombre para el video: ")
+                    self.nombre_video = nombre_video
+                    if not self.nombre_video.replace(" ", "").isalnum():
+                        print("Nombre en formato incorrecto, ingrese solo numeros y letras: ")
+                    else:
+                        break
 
-                extension_video = input("Ingresa la extension del video(.mpg, .mov, etc.): ")
-                self.extension_video = extension_video
 
-                tamano_video = int(input("Ingresa el tamano en megas del video(no mayor a 3): "))
-                self.tamano_videos = tamano_video
+                while True:
+                    extension_video = input("Ingresa la extension del video(.mpg, .mov, etc.): ")
+                    self.extension_video = extension_video
+                    extensiones = [".mpg", ".mov", ".mp4", ".avi"]
+                    if self.extension_video not in extensiones:
+                        print("Extension en formato incorrecto, ingrese solo extensiones(.mpg, .mov, .mp4, .avi)")
+                    else:
+                        break
+
+
+                while True:
+                    tamano_video = input("Ingresa el tamano en megas del video(no mayor a 3): ")
+                    self.tamano_videos = tamano_video
+                    if self.tamano_videos.isdigit():
+                        self.tamano_videos = int(self.tamano_videos)
+                        if 0 < self.tamano_videos <= 3:
+                            break
+                        else:
+                            print("El archivo no debe pesar mas de 3 MB")
+
 
                 self.lista_videos.append({
                     "nombre": nombre_video,
                     "extension_video": extension_video,
                     "tamano_videos": tamano_video
                 })
-                print("-Video agregado correctamente-")
+                print("--Video agregado correctamente--")
+            #print(f"{persona.cantidad_videos} -Videos agregados correctamente-")
             return self.lista_videos
 
 
-    def respuesta_no(self):
 
-        #if persona.respuesta == 'no':
+    def respuesta_no(self):
             while True:
                 print("Desea salir del sistema?")
-                sub_respuesta = input("Si/No: ")
+
+                while True:
+                    sub_respuesta = input("Si/No: ").lower()
+                    respuesta_si_no = ["si", "no"]
+                    if sub_respuesta not in respuesta_si_no:
+                        print("Formato incorrecto, ingrese solo (si, no)")
+                    else:
+                        break
+
+
                 if sub_respuesta == 'si':
                     print("Gracias por usar nuestro sistema, hasta luego...")
                     break

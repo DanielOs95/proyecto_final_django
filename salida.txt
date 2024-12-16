@@ -1,12 +1,15 @@
 ***********IMPRESION DE DATOS**********
 
+
 Informacion del empleado:
-Numero de empleado: D245 | Nombre: Daniel Osorio | Cantidad de videos: 3 | 
+Numero de empleado: D786565 | Nombre: Daniel Osorio | Cantidad de videos: 2 | 
 
 Informacion de videos:
-Video 1:Titulo: Risa | Nombre: Video Chistoso | Extension: .mpg | Tamano: 1 MB | 
-___________________________________________________________________________
-Video 2:Titulo: Drama | Nombre: Resumen novelas | Extension: .mov | Tamano: 2 MB | 
-___________________________________________________________________________
-Video 3:Titulo: Noticia | Nombre: Noticia del dia | Extension: .avi | Tamano: 3 MB | 
-___________________________________________________________________________
+
+Video 1: 
+Nombre: Video 1 | Extension: .mpg | Tamano: 1 MB | 
+------------------------------------------------------------------------
+
+Video 2: 
+Nombre: Video 2 | Extension: .mov | Tamano: 3 MB | 
+------------------------------------------------------------------------
