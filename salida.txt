@@ -1,16 +1,12 @@
-*******IMPRESION DE DATOS******
-Numero de empleado: trfg
-Nombre: gh
-Cantidad de videos: 2
-_____________________________________
+***********IMPRESION DE DATOS**********
+
+Informacion del empleado:
+Numero de empleado: D245 | Nombre: Daniel Osorio | Cantidad de videos: 3 | 
+
 Informacion de videos:
-Titulo: fghj
-Nombre: ghj
-Extension: .mov
-Tamano: 3 MB
-********************************
-Titulo: gfgh
-Nombre: ghb
-Extension: .mov
-Tamano: 2 MB
-********************************
+Video 1:Titulo: Risa | Nombre: Video Chistoso | Extension: .mpg | Tamano: 1 MB | 
+___________________________________________________________________________
+Video 2:Titulo: Drama | Nombre: Resumen novelas | Extension: .mov | Tamano: 2 MB | 
+___________________________________________________________________________
+Video 3:Titulo: Noticia | Nombre: Noticia del dia | Extension: .avi | Tamano: 3 MB | 
+___________________________________________________________________________

@@ -1,4 +1,4 @@
-''''#esta funcion contiene el input de entrada para el numero de nomina para el empleado
+#esta funcion contiene el input de entrada para el numero de nomina para el empleado
 #y tambien ya contiene la validacion para evitar que se ingrese campo vacio, solo valores alfanumericos
 def numero_nomina():
     while True:
@@ -142,25 +142,24 @@ def respuesta_no(respuesta,):
 #y en lista_videos
 def crear_archivo(id_empleado, nombre, videos, lista_videos):
     contenido_archivo = (
-        "*******IMPRESION DE DATOS******\n"
-        f"Numero de empleado: {id_empleado}\n" 
-        f"Nombre: {nombre}\n"
-        f"Cantidad de videos: {videos}\n"
-        "_____________________________________\n"
+        "***********IMPRESION DE DATOS**********\n\n"
+        "Informacion del empleado:\n"
+        f"Numero de empleado: {id_empleado} | " 
+        f"Nombre: {nombre} | "
+        f"Cantidad de videos: {videos} | "
     )
 
-    contenido_archivo += "Informacion de videos:\n"
-    #enumerar_videos = 1
-    for i in lista_videos:
+    contenido_archivo += "\n\nInformacion de videos:\n"
+    for i, video in enumerate(lista_videos, start=1):
         contenido_archivo += (
-            #f"Video {i}:\n"
-            f"Titulo: {i['titulo']}\n"
-            f"Nombre: {i['nombre']}\n"
-            f"Extension: {i['extension']}\n"
-            f"Tamano: {i['tamano']} MB\n"
-            "********************************\n"
+            f"Video {i}:\n"
+            f"Titulo: {video['titulo']} | "
+            f"Nombre: {video['nombre']} | "
+            f"Extension: {video['extension']} | "
+            f"Tamano: {video['tamano']} MB | "
+            "\n___________________________________________________________________________\n"
         )
-        #enumerar_videos += 1
+
 #aqui se realiza ua exception en caso de que falle al crear el archivo
     try:
         with open('salida.txt', 'w') as file:
@@ -183,7 +182,7 @@ def iniciar_app():
         respuesta_no(respuesta,)
 
 
-iniciar_app()'''
+iniciar_app()
 
 
 
