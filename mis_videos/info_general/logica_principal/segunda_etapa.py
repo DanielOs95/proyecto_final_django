@@ -1,3 +1,5 @@
+from servicios import insertar_usuario, insertar_video
+
 class Persona:
 
     def __init__(self, id_nomina, nombre_usuario, cantidad_videos, respuesta):
@@ -81,6 +83,7 @@ class Video(Persona):
         self.lista_videos = []
 
         if persona.respuesta == 'si':
+            usuario = insertar_usuario(persona.id_nomina, persona.nombre_usuario)
             for i in range(persona.cantidad_videos):
                 print(f"Ingresa los datos del video {i + 1}")
                 while True:
@@ -112,14 +115,14 @@ class Video(Persona):
                         else:
                             print("El archivo no debe pesar mas de 3 MB")
 
-
+                insertar_video(usuario, self.nombre_video, self.extension_video, self.tamano_videos)
                 self.lista_videos.append({
                     "nombre": nombre_video,
                     "extension_video": extension_video,
                     "tamano_videos": tamano_video
                 })
                 print("--Video agregado correctamente--")
-            #print(f"{persona.cantidad_videos} -Videos agregados correctamente-")
+
             return self.lista_videos
 
 
@@ -170,7 +173,7 @@ class Video(Persona):
             )
         # aqui se realiza una exception en caso de que falle al crear el archivo
         try:
-            with open('salida.txt', 'w') as file:
+            with open('../../../salida.txt', 'w') as file:
                 file.write(contenido_archivo)
                 print("Tiquet guardado correctamente")
         except Exception as e:

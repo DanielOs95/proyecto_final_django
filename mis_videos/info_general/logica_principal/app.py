@@ -162,7 +162,7 @@ def crear_archivo(id_empleado, nombre, videos, lista_videos):
 
 #aqui se realiza ua exception en caso de que falle al crear el archivo
     try:
-        with open('salida.txt', 'w') as file:
+        with open('../../../salida.txt', 'w') as file:
             file.write(contenido_archivo)
             print("Tiquet guardado correctamente")
     except Exception as e:
