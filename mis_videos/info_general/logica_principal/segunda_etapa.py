@@ -1,4 +1,4 @@
-from servicios import insertar_usuario, insertar_video
+from .servicios import insertar_usuario, insertar_video
 
 class Persona:
 
@@ -177,7 +177,7 @@ class Video(Persona):
                 file.write(contenido_archivo)
                 print("Tiquet guardado correctamente")
         except Exception as e:
-            print(f"Error al guardar el archivo: {e}")
+            print(f"Error  al guardar el archivo: {e}")
 
 
 videos = Video("","", "", "", "", "", "", "")

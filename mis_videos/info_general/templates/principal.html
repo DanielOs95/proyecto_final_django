@@ -7,5 +7,17 @@
 
 {% block content %}
     <h1>Bienvenido</h1>
+    <h3>Por favor ingresa tus datos</h3>
+    <form action="{% url 'manejo_datos' %}" method="post">
 
+        {% csrf_token %}
+
+        <input type="text" name="id_nomina" placeholder="Ingresa tu ID de empleado" required>
+        <br>
+        <input type="text" name="nombre_usuario" placeholder="Ingresa tu nombre completo" required>
+        <br>
+        <input type="number" name="cantidad_videos" placeholder="Ingresa la cantidad de videos" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
 {% endblock %}

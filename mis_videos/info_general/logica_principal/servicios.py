@@ -23,6 +23,19 @@ def insertar_video(usuario, nombre_video, extension_video, tamano_videos):
 
 
 
+def insertar_usuario_video(usuario, video):
+    try:
+        usuario_video = UsuarioVideo.objects.create(
+            id_nomina=usuario,
+            id_video=video
+        )
+        return usuario_video
+
+    except Exception as e:
+        print(f"Error al relacionar videos, usuario: {e}")
+
+
+
 
 
 

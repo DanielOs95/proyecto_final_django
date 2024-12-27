@@ -1,0 +1,24 @@
+{% extends 'master.html' %}
+
+{% block title %}
+    progol-datos-videos
+{% endblock %}
+
+{% block content %}
+
+<h1>Ingresa los datos del video</h1>
+
+<form action="{% url 'datos_video %}" method="post">
+
+  {% csrf_token %}
+
+  <input type="text" name="nombre_videos" id="nombre_videos">
+  <br>
+   <input type="text" name="extension_videos" id="extension_videos">
+  <br>
+   <input type="number" name="tamano_videos" id="tamano_videos">
+  <br>
+  <button type="submit">Guardar</button>
+</form>
+
+{% endblock %}
