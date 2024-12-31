@@ -8,15 +8,15 @@
 
 <h1>Ingresa los datos del video</h1>
 
-<form action="{% url 'datos_video %}" method="post">
+<form action="{% url 'tercera' %}" method="post">
 
   {% csrf_token %}
 
-  <input type="text" name="nombre_videos" id="nombre_videos">
+  <input type="text" name="nombre_video" id="nombre_video" placeholder="Ingresa nombre del video">
   <br>
-   <input type="text" name="extension_videos" id="extension_videos">
+   <input type="text" name="extension_video" id="extension_video" placeholder="Ingresa extension del video">
   <br>
-   <input type="number" name="tamano_videos" id="tamano_videos">
+   <input type="number" name="tamano_video" id="tamano_video" placeholder="Ingresa tamano en megas del video">
   <br>
   <button type="submit">Guardar</button>
 </form>
