@@ -10,8 +10,8 @@
     <a href="{% url 'principal' %}">Pagina principal</a>
     <h1>Datos ingresados correctamente.</h1>
 
-    <table>
-        <thead>lista de usuarios</thead>
+    <h3 class="tituloTablas">Lista de usuarios</h3>
+    <table class="primera_tabla">
         <tr>
             <th>Numero de nomina</th>
             <th>Nombre</th>
@@ -24,15 +24,16 @@
         {% endfor %}
     </table>
 
-    <table>
-        <thead>lista de videos</thead>
+    <h3 class="tituloTablas">Lista de videos</h3>
+    <table class="segunda_tabla">
         <tr>
             <th>ID</th>
             <th>Nombre</th>
             <th>Extension</th>
-            <th>Tamano</th>
-            <th>Usuario</th>
+            <th>Tamaño</th>
+            <th>Usuario que ingreso el video</th>
         </tr>
+
         {% for video in lista_videos %}
         <tr>
             <td>{{ video.id }}</td>

@@ -1,8 +1,9 @@
 body {
-    background-color: red;
+    background-color: gray;
     align-items: center;
     font-family: Arial;
     text-align: center;
+
 }
 
 form {
@@ -17,13 +18,38 @@ form input{
     width: 200px;
     height: 8px;
     padding: 10px;
+    border-radius: 8px;
 }
 
 button {
     padding: 10px;
     background-color: blueviolet;
     color: white;
-    border-radius: 10px;
+    border-radius: 8px;
+    width: 80px;
+    margin-top: 20px;
+}
+
+
+
+.primera_tabla {
+   border-collapse: width;
+   margin: 0 auto;
+}
+
+.segunda_tabla {
+   border-collapse: width;
+   margin: 0 auto;
+}
+
+.tituloTablas {
+    margin-top: 55px;
+}
+
+th, td {
+    border: 1px solid white;
+    padding: 5px;
+    text-align: left;
 }
 
 
