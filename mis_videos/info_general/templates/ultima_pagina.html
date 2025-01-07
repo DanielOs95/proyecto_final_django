@@ -7,6 +7,40 @@
 
 
 {% block content %}
+    <a href="{% url 'principal' %}">Pagina principal</a>
     <h1>Datos ingresados correctamente.</h1>
-    <h3>Gracias por usar nuestro sistema, hasta luego...</h3>
+
+    <table>
+        <thead>lista de usuarios</thead>
+        <tr>
+            <th>Numero de nomina</th>
+            <th>Nombre</th>
+        </tr>
+        {% for usuario in lista_usuarios %}
+        <tr>
+            <td>{{ usuario.id_nomina }}</td>
+            <td>{{ usuario.nombre_usuario }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <table>
+        <thead>lista de videos</thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Extension</th>
+            <th>Tamano</th>
+            <th>Usuario</th>
+        </tr>
+        {% for video in lista_videos %}
+        <tr>
+            <td>{{ video.id }}</td>
+            <td>{{ video.nombre_video }}</td>
+            <td>{{ video.extension_video }}</td>
+            <td>{{ video.tamano_video }}</td>
+            <td>{{ video.usuario_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 {% endblock %}

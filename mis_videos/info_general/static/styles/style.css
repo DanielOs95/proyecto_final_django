@@ -1,3 +1,30 @@
 body {
-    background-color: blue;
+    background-color: red;
+    align-items: center;
+    font-family: Arial;
+    text-align: center;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input{
+    margin: 0;
+    width: 200px;
+    height: 8px;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 10px;
+}
+
+
+
