@@ -95,7 +95,7 @@ def respuesta_si(videos):
                 else:
                     print("Tamano en formato incorrecto,  Ingrese solo numeros")
 
-            #en este bloque se insertanlos datos ya validados de titulo_video, nombre_video, extension_video, megas_video
+            #en este bloque se insertan los datos ya validados de titulo_video, nombre_video, extension_video, megas_video
             #se van a insertar a la lista vacia lista_videos
             lista_videos.append({
                 "titulo": titulo_video,

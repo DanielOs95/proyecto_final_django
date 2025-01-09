@@ -2,14 +2,14 @@
 
 
 Informacion del empleado:
-Numero de empleado: D786565 | Nombre: Daniel Osorio | Cantidad de videos: 2 | 
+Numero de empleado: d001 | Nombre: daniel osorio | Cantidad de videos: 2 | 
 
 Informacion de videos:
 
 Video 1: 
-Nombre: Video 1 | Extension: .mpg | Tamano: 1 MB | 
+Nombre: video 1 | Extension: .mov | Tamano: 2 MB | 
 ------------------------------------------------------------------------
 
 Video 2: 
-Nombre: Video 2 | Extension: .mov | Tamano: 3 MB | 
+Nombre: video 2 | Extension: .mp4 | Tamano: 3 MB | 
 ------------------------------------------------------------------------

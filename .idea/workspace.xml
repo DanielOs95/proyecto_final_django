@@ -7,9 +7,9 @@
     <list default="true" id="92a21dc0-6c7f-4983-ba66-c5d5e2f17b40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mis_videos/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/static/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/static/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/templates/ultima_pagina.html" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/templates/ultima_pagina.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/logica_principal/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/logica_principal/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/logica_principal/segunda_etapa.py" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/logica_principal/segunda_etapa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salida.txt" beforeDir="false" afterPath="$PROJECT_DIR$/salida.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
