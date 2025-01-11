@@ -6,18 +6,14 @@
 
 {% block content %}
     <h1>Gracias por usar PRO-GOL</h1>
-    <p>Bienvenido {{ nombre_usuario }}, tu numero de nomina es {{ id_nomina }} y estas intentando subir {{ cantidad_videos }} videos </p>
+    <p>Bienvenido {{ nombre_usuario }}, tu numero de nomina es {{ id_nomina }} y estas intentando subir {{ video }} videos </p>
     <p>la informacio es correcta?</p>
 
 
     <form method="post">
-
         {% csrf_token %}
 
         <button type="submit" name="respuesta" value="si">SI</button>
         <button type="submit" name="respuesta" value="no">NO</button>
     </form>
 {% endblock %}
-
-
-

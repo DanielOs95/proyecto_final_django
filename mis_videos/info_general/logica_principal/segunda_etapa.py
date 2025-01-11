@@ -1,7 +1,5 @@
 #from .servicios import insertar_usuario, insertar_video
-
 class Persona:
-
     def __init__(self, id_nomina, nombre_usuario, cantidad_videos, respuesta):
         self.id_nomina = id_nomina
         self.nombre_usuario = nombre_usuario
@@ -67,7 +65,6 @@ persona.respuesta_opcional()
 
 
 
-
 class Video(Persona):
 
 
@@ -86,7 +83,6 @@ class Video(Persona):
         self.lista_videos = []
 
         if persona.respuesta == 'si':
-            #usuario = insertar_usuario(persona.id_nomina, persona.nombre_usuario)
             for i in range(persona.cantidad_videos):
                 print(f"Ingresa los datos del video {i + 1}")
 
@@ -104,7 +100,7 @@ class Video(Persona):
                 while True:
                     extension_video = input("Ingresa la extension del video(.mpg, .mov, etc.): ")
                     self.extension_video = extension_video
-                    extensiones = [".mpg", ".mov", ".mp4", ".avi"]
+                    extensiones = [".mp4", ".avi", ".mov", ".wmv", ".mkv", ".webm", ".flv", ".mov"]
                     if self.extension_video not in extensiones:
                         print("Extension en formato incorrecto, ingrese solo extensiones(.mpg, .mov, .mp4, .avi)")
                     else:
@@ -121,7 +117,6 @@ class Video(Persona):
                         else:
                             print("El archivo no debe pesar mas de 3 MB")
 
-                #insertar_video(usuario, self.nombre_video, self.extension_video, self.tamano_videos)
 
                 # en este bloque se insertan los datos ya validados de titulo_video, nombre_video, extension_video, megas_video
                 # se van a insertar a la lista vacia lista_videos

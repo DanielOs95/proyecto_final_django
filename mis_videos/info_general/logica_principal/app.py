@@ -76,7 +76,7 @@ def respuesta_si(videos):
             # la lista extensiones (".mpg", ".mov", ".mp4", ".avi")
             while True:
                 extension_video = input("Ingresa la extension del video(.mpg, .mov, etc.): ")
-                extensiones = [".mpg", ".mov", ".mp4", ".avi"]
+                extensiones = [".mp4", ".avi", ".mov", ".wmv", ".mkv", ".webm", ".flv", ".mov"]
                 if extension_video not in extensiones:
                     print("Extension en formato incorrecto, ingrese solo extensiones(.mpg, .mov, .mp4, .avi)")
                 else:

@@ -30,7 +30,10 @@ button {
     margin-top: 20px;
 }
 
-
+button:hover {
+    background-color: #e9acac;
+    color: black;
+}
 
 .primera_tabla {
    border-collapse: width;

@@ -31,7 +31,6 @@
             <th>Nombre</th>
             <th>Extension</th>
             <th>Tamaño</th>
-            <th>Usuario que ingreso el video</th>
         </tr>
 
         {% for video in lista_videos %}
@@ -40,7 +39,20 @@
             <td>{{ video.nombre_video }}</td>
             <td>{{ video.extension_video }}</td>
             <td>{{ video.tamano_video }}</td>
-            <td>{{ video.usuario_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+     <h3 class="tituloTablas">Relacion usuario/video</h3>
+    <table class="primera_tabla">
+        <tr>
+            <th>usuario</th>
+            <th>video</th>
+        </tr>
+        {% for usuario_video in lista_usuario_videos %}
+        <tr>
+            <td>{{ usuario_video.usuario.id_nomina }}</td>
+            <td>{{ usuario_video.video.nombre_video }}</td>
         </tr>
         {% endfor %}
     </table>
