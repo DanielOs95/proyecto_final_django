@@ -4,7 +4,7 @@ from  django.template import loader
 from .models import Usuario, Video, UsuarioVideo
 from .forms import UsuarioForm, VideoForm
 
-
+#aqui se encuentra la logica que maneja la tercer pagina (se piden los datos de los usuarios, id_nomina y nombre usuario)
 def principal(request):
    if request.method == "POST":
        form = UsuarioForm(request.POST)
@@ -26,6 +26,7 @@ def principal(request):
        form = UsuarioForm()
    return render(request, 'principal.html', {'form': form})
 
+#aqui se encuentra la logica que maneja la segunda pagina que da la bienvenida
 def bienvenida(request):
     id_nomina = request.session['id_nomina']
     nombre_usuario = request.session['nombre_usuario']
@@ -39,6 +40,7 @@ def bienvenida(request):
 
     return render(request, 'bienvenida.html', {"id_nomina": id_nomina, "nombre_usuario": nombre_usuario, "video": video})
 
+#aqui se encuentra la logica que maneja la tercer pagina (se piden los datos de los videos, nombre_video, extension_video y tamano_video)
 def pagina_videos(request):
     if request.method == "POST":
         id_nomina = request.session.get('id_nomina')
@@ -61,6 +63,7 @@ def pagina_videos(request):
 
     return render(request, 'pagina_videos.html', {'forms': forms})
 
+#aqui se encuentra la logica que maneja la ultima pagina se muestran toda la informacion de la base de datos, en tablas
 def ultima_pagina(request):
     lista_usuario = Usuario.objects.all().values()
     lista_video = Video.objects.all().values()

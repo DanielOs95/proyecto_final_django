@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92a21dc0-6c7f-4983-ba66-c5d5e2f17b40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mis_videos/info_general/templates/pagina_videos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/logica_principal/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/logica_principal/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/logica_principal/segunda_etapa.py" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/logica_principal/segunda_etapa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/logica_principal/servicios.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/static/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/static/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/templates/principal.html" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/templates/principal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/templates/segunda.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/templates/tercera.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/templates/ultima_pagina.html" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/templates/ultima_pagina.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mis_videos/info_general/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mis_videos/info_general/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="92a21dc0-6c7f-4983-ba66-c5d5e2f17b40" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

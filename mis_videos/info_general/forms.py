@@ -1,7 +1,8 @@
 from django import forms
 from .models import Usuario, Video
 
-
+#aqui se crean las instancias pra el formulario que obtendra los datos del usuario id_nomina y nombre_usuario
+#tambien se hacen las validaciones para los inputs
 class UsuarioForm(forms.ModelForm):
     video = forms.IntegerField()
     class Meta:
@@ -20,6 +21,8 @@ class UsuarioForm(forms.ModelForm):
         return nombre_usuario
 
 
+#aqui se crean las instancias para el formulario que obtendra los datos de los videos nombre_video, extension_video y tamano_video
+#tambien se hacen las validaciones para los inputs de los videos
 class VideoForm(forms.ModelForm):
     class Meta:
         model = Video
